@@ -2,7 +2,7 @@ import { pool } from "../myslq.conection/mysq.js";
 
 const GetdateTask =  async (req, res) => {
     try {
-        const [rows] = await pool.query('SELECT * FROM tasks')
+        const {rows} = await pool.query('SELECT * FROM tasks')
         res.json(rows)
     } catch (error) {
         console.error('Error al obtener tareas:', error)
@@ -13,7 +13,7 @@ const GetdateTask =  async (req, res) => {
 const GetIdTask =  async (req, res) => {
     try{
         const {id} = req.params
-        const [rows] = await pool.query('select * from tasks where id_task = ?', [id])
+        const {rows} = await pool.query('select * from tasks where id_task = $1', [id])
         res.json(rows)
 
     }catch(error){
@@ -26,7 +26,7 @@ const PostTask = async (req, res) => {
     try{
         const {task} = req.body
         if(task.length> 0){
-            const [rows] = await pool.query("insert into tasks (task,complete) values (?,false)",[task])
+            const {rows} = await pool.query("insert into tasks (task,complete) values ($1,false)",[task])
             res.json(rows)
         }
     }catch(error){
@@ -41,7 +41,7 @@ const PutTask = async(req,res)=>{
         const {id} = req.params
 
         const {task,complete} = req.body
-        const [rows] = await pool.query('update tasks set task = ifnull(?,task) , complete = ifnull(?,complete) where id_task = ?', [task,complete,id])
+        const {rows} = await pool.query('UPDATE tasks SET task = COALESCE($1,task) , complete = COALESCE($2,complete) WHERE id_task = $3 RETURNING *', [task,complete,id])
         res.json(rows)
     }catch(error){
         console.log(error)
@@ -52,7 +52,7 @@ const PutTask = async(req,res)=>{
 const DeleteTask = async(req,res)=>{
     try{
         const {id} = req.params
-        const [rows] = await pool.query('delete from tasks where id_task = ?', [id])
+        const {rows} = await pool.query('delete from tasks where id_task = $1', [id])
         res.json(rows)
     }catch(error){
         console.log(error)
