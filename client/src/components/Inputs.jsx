@@ -3,7 +3,7 @@ function Inputs({setValues}) {
   return (
     <div className="">
       
-        <input type="text" onChange={(e) =>{setValues(e.target.value)}} className="bg-red-100 rounded mr-4 outline-none px-3 drop-shadow-md" />
+        <input type="text" onChange={(e) =>{setValues(e.target.value)}} className="bg-white rounded mr-4 outline-none py-1 px-3 shadow-2xs" />
       
     </div>
   );

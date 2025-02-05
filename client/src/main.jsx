@@ -5,7 +5,7 @@ import './index.css'
 import { ProviderTask } from './context/Contex.task.jsx'
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
-    <div className='bg-slate-900 min-h-screen '>
+    <div className='background min-h-screen '>
 
     <React.StrictMode>
         <ProviderTask>

@@ -1,16 +1,22 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 function Aside() {
   return (
     <div>
-        <div className="bg-slate-400 w-22 text-center rounded min-h-[400px] ml-10 mt-10 drop-shadow-xl">
-            <Link to='/'>Aside</Link >
-            <div className="flex flex-col justify-between items-center h-22 mt-30">
-                <Link to='/task' className="hover:underline hover:text-slate-800">task</Link>
-                <Link to='/gold' className="hover:underline hover:text-slate-800">Gold</Link>
-            </div>
+      <div className="aside w-26 text-center rounded min-h-[500px] ml-10 mt-10 ">
+        <div className="flex flex-col justify-between items-center h-46 mt-20">
+          <Link to="/" className="hover:underline link">
+            home
+          </Link>
+          <Link to="/task" className="hover:underline link">
+            task
+          </Link>
+          <Link to="/gold" className="hover:underline link">
+            Gold
+          </Link>
         </div>
+      </div>
     </div>
-  )
+  );
 }
 
-export default Aside
+export default Aside;

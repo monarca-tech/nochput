@@ -1,1 +1,33 @@
 @import "tailwindcss";
+
+@layer{
+    /* modo black */
+    .background{
+        @apply bg-[#121212]
+    }
+    .Card{
+        @apply bg-[#1E1E1E] text-[#fff] rounded-lg shadow-lg p-4
+    }
+    .text-secundario{
+        @apply text-[#B3B3B3] text-[19px]
+    }
+    .text-primary{
+        @apply text-[23px]
+    }
+    .button-primary{
+        @apply bg-[#21AF50]
+    }
+    .button-primary:hover{
+        @apply bg-[#4CAF50]
+    }
+    .aside{
+        @apply bg-[#1E1E1E] text-[#B3B3B3]  rounded-lg shadow-lg p-4 text-2xl
+    }
+    .link:hover{
+        @apply text-[#9d9d9d] 
+    }
+    .icons-size{
+        @apply w-6 h-6
+    }
+    /* modo white */
+}
