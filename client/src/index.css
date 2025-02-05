@@ -8,6 +8,9 @@
     .Card{
         @apply bg-[#1E1E1E] text-[#fff] rounded-lg shadow-lg p-4
     }
+    .modal{
+        @apply  bg-[#1E1E1E] text-[#000] rounded-lg shadow-lg p-4
+    }
     .text-secundario{
         @apply text-[#B3B3B3] text-[19px]
     }
