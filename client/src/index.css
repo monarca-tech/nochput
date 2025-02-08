@@ -3,28 +3,28 @@
 @layer{
     /* modo black */
     .background{
-        @apply bg-[#121212]
+        @apply bg-[#F8F9FA]
     }
     .Card{
-        @apply bg-[#1E1E1E] text-[#fff] rounded-lg shadow-lg p-4
+        @apply bg-[#E9ECEF] text-[#03030e] rounded-tr-3xl rounded-bl-3xl shadow-2xl p-4
     }
     .modal{
-        @apply  bg-[#1E1E1E] text-[#000] rounded-lg shadow-lg p-4
+        @apply  bg-[#E9ECEF] text-[#000] rounded-lg shadow-lg p-4
     }
     .text-secundario{
-        @apply text-[#B3B3B3] text-[19px]
+        @apply text-[#3a3838] text-[19px] font-normal 
     }
     .text-primary{
-        @apply text-[23px]
+        @apply text-[23px] mb-2 font-bold
     }
     .button-primary{
-        @apply bg-[#21AF50]
+        @apply bg-[#D0EBFF]
     }
     .button-primary:hover{
-        @apply bg-[#4CAF50]
+        @apply bg-[#E5DBFF]
     }
     .aside{
-        @apply bg-[#1E1E1E] text-[#B3B3B3]  rounded-lg shadow-lg p-4 text-2xl
+        @apply bg-[#D0EBFF] text-[#060118]  rounded-lg shadow-2xl p-4 text-2xl font-semibold
     }
     .link:hover{
         @apply text-[#9d9d9d] 

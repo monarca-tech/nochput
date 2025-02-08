@@ -143,7 +143,8 @@ export function ProviderTask({ children }) {
     setinputudate,
     updateTask,
     complatetask,
-    inputupdate
+    inputupdate,
+    inputAdd
   };
 
   return (
