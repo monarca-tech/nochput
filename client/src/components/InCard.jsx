@@ -1,18 +1,19 @@
 import { useContextTask } from "../context/Contex.task";
 import { VscTrash, VscEdit, VscPassFilled } from "react-icons/vsc";
-function Card() {
+function InCard() {
   const valuesdata = useContextTask();
-  // filter task each with complete true
+  // filter task each with complete false
   const states = valuesdata.state.data;
-  const filterTaskCard = states.filter((item) => item.complete === true)
+  const InCardTask = states.filter((item) => item.complete === false)
   // 
+  
   const DeleteTask = valuesdata.DeleteTask
   const showUpdate = valuesdata.showUpdate
   const complatetask = valuesdata.complatetask
   //
   return (
     <div className="p-2 grid [grid-template-columns:repeat(auto-fill,minmax(250px,1fr))]  gap-2 [grid-auto-rows:auto] ">
-      {filterTaskCard.map((item, index) => (
+      {InCardTask.map((item, index) => (
         <div
           key={index}
           className="Card  drop-shadow-lg flex flex-col justify-between "
@@ -35,4 +36,4 @@ function Card() {
   );
 }
 
-export default Card;
+export default InCard;

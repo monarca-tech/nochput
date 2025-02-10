@@ -1,8 +1,10 @@
-import Card from "../components/Card";
+// import Card from "../components/Card";
 import Inputs from "../components/Inputs";
 import { useContextTask } from "../context/Contex.task";
 import Button from "../components/Button";
 import Modal from '../components/Modal'
+import Direccion from "../components/Direccion";
+import {  Outlet} from "react-router-dom";
 function Task() {
   const setis = useContextTask();
   const setinput = setis.setinputAdd;
@@ -18,7 +20,8 @@ function Task() {
             <Button text="add" click={Addtask} />
           </div>
         </div>
-        <Card />
+        <Direccion/>
+        <Outlet/>
         {
           show? <Modal/>:''
         }
